@@ -8,5 +8,5 @@
 #' @examples
 #' hello('Landon')
 hello <- function(name) {
-  print(paste0("Hello ",x))
+  print(paste0("Hello Landon & dean ",x))
 }
