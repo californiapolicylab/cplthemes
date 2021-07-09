@@ -10,10 +10,13 @@ customCPLTheme <- function(base_size = 12,
                            base_family = "Arial",
                            base_line_size = 0.5,
                            base_rect_size = 0.5) {
+
     half_line <- base_size / 2L
+
     ggplot2::theme(
 
         # main attributes
+
         line = ggplot2::element_line(colour = "#000000",
                                      size = base_line_size,
                                      linetype = 1L,
@@ -32,7 +35,9 @@ customCPLTheme <- function(base_size = 12,
                                      lineheight = 0.9,
                                      margin = ggplot2::margin(),
                                      debug = FALSE),
+
         # Plot Attributes
+
         plot.tag = ggplot2::element_text(size = base_size * 1.5,
                                          hjust = 0L,
                                          vjust = 0L,
@@ -57,7 +62,9 @@ customCPLTheme <- function(base_size = 12,
                                       r = base_line_size * 24,
                                       b = half_line,
                                       l = half_line),
+
         # axis attributes
+
         axis.text = ggplot2::element_text(size = base_size),
         axis.text.x = ggplot2::element_text(vjust = 1, margin = ggplot2::margin(t = 4L)),
         axis.text.y = ggplot2::element_text(hjust = 1),
@@ -83,7 +90,9 @@ customCPLTheme <- function(base_size = 12,
                                             linetype = NULL,
                                             lineend = NULL),
         axis.line.y = ggplot2::element_blank(),
+
         # legend attributes
+
         legend.background = ggplot2::element_blank(),
         legend.spacing = ggplot2::unit(20L, "pt"),
         legend.spacing.x = ggplot2::unit(4L, "pt"),
@@ -105,7 +114,9 @@ customCPLTheme <- function(base_size = 12,
         legend.box.margin = NULL,
         legend.box.background = NULL,
         legend.box.spacing = NULL,
+
         # panel attributes
+
         panel.background = ggplot2::element_blank(),
         panel.border = ggplot2::element_blank(),
         panel.ontop = FALSE,
@@ -119,7 +130,9 @@ customCPLTheme <- function(base_size = 12,
         panel.grid.minor = ggplot2::element_line(),
         panel.grid.minor.x = ggplot2::element_blank(),
         panel.grid.minor.y = ggplot2::element_blank(),
+
         # strip attributes (Faceting)
+
         strip.background = ggplot2::element_rect(fill = "#dedddd",
                                                  colour = NA,
                                                  size = 10L),
