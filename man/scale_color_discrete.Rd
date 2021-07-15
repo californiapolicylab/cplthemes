@@ -2,7 +2,7 @@
 % Please edit documentation in R/scales.R
 \name{scale_color_discrete}
 \alias{scale_color_discrete}
-\title{Discrete color scale that aligns with the CPL style}
+\title{Discrete color scale that aligns with CPL style}
 \usage{
 scale_color_discrete(...)
 }
@@ -10,5 +10,5 @@ scale_color_discrete(...)
 \item{...}{other arguments passed to \code{discrete_scale()}}
 }
 \description{
-Discrete color scale that aligns with the CPL style
+Discrete color scale that aligns with CPL style
 }
