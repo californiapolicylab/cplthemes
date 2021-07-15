@@ -11,7 +11,7 @@ devtools::install_github("lmgibson/cplthemes")
 
 # Usage
 
-```r:
+```r
 library(tidyverse)
 library(cplthemes)
 
@@ -25,3 +25,5 @@ mtcars %>%
     scale_y_continuous(expand = expand_scale(mult = c(0,0.1))) +
     labs(title = "this title")
 ```
+
+![](assets/plt1.jpeg)
