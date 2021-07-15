@@ -30,21 +30,21 @@ setThemeCPL <- function(base_size = 12,
 
     # set default colors for monochromatic geoms ------------------------------
 
-    ggplot2::update_geom_defaults("bar", list(fill = "#21578E"))
-    ggplot2::update_geom_defaults("col", list(fill = "#21578E"))
-    ggplot2::update_geom_defaults("point", list(colour = "#21578E"))
-    ggplot2::update_geom_defaults("line", list(colour = "#21578E"))
-    ggplot2::update_geom_defaults("step", list(colour = "#21578E"))
-    ggplot2::update_geom_defaults("path", list(colour = "#21578E"))
-    ggplot2::update_geom_defaults("boxplot", list(fill = "#21578E"))
-    ggplot2::update_geom_defaults("density", list(fill = "#21578E"))
-    ggplot2::update_geom_defaults("violin", list(fill = "#21578E"))
+    ggplot2::update_geom_defaults("bar", list(fill = "#246195"))
+    ggplot2::update_geom_defaults("col", list(fill = "#246195"))
+    ggplot2::update_geom_defaults("point", list(colour = "#246195"))
+    ggplot2::update_geom_defaults("line", list(colour = "#246195"))
+    ggplot2::update_geom_defaults("step", list(colour = "#246195"))
+    ggplot2::update_geom_defaults("path", list(colour = "#246195"))
+    ggplot2::update_geom_defaults("boxplot", list(fill = "#246195"))
+    ggplot2::update_geom_defaults("density", list(fill = "#246195"))
+    ggplot2::update_geom_defaults("violin", list(fill = "#246195"))
 
     # set default colors for monochromatic stats ------------------------------
 
-    ggplot2::update_stat_defaults("count", list(fill = "#21578E"))
-    ggplot2::update_stat_defaults("boxplot", list(fill = "#21578E"))
-    ggplot2::update_stat_defaults("density", list(fill = "#21578E"))
-    ggplot2::update_stat_defaults("ydensity", list(fill = "#21578E"))
+    ggplot2::update_stat_defaults("count", list(fill = "#246195"))
+    ggplot2::update_stat_defaults("boxplot", list(fill = "#246195"))
+    ggplot2::update_stat_defaults("density", list(fill = "#246195"))
+    ggplot2::update_stat_defaults("ydensity", list(fill = "#246195"))
 
 }
