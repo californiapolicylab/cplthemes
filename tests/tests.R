@@ -24,13 +24,12 @@ mtcars %>%
     labs(title = "Gas mileage by Number of Cylinders",
          subtitle = "MPG",
          x = "test",
-         y = "test")
+         y = stringr::str_wrap("test with longer title to look at wrapping", width = 10),
+         caption = "Source: some source about cars")
 
-# questions
+# lingering questions/design features
 
-# black note text
-# horizontal y axis titles at top of axis
-# legends to right or inside plot
-# tan/beige color in UI plots (see Figure 16 in latest one)
 # inconsistency in space between columns
+# inconsistency in legend placement
+
 
