@@ -1,13 +1,13 @@
 #' Constructs the custom CPL theme
 #'
 #' @param base_size Base font size. Default is 12.
-#' @param base_family Font. Default is Arial.
+#' @param base_family Font. Default is Helvetica.
 #' @param base_line_size Default is 0.5
 #' @param base_rect_size Default is 0.5
 #'
 #' @return A theme that can then be used with \code{\link{theme_set}}
 customCPLTheme <- function(base_size = 12,
-                           base_family = "Arial",
+                           base_family = "Helvetica",
                            base_line_size = 0.5,
                            base_rect_size = 0.5) {
 

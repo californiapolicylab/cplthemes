@@ -6,7 +6,7 @@
 \usage{
 customCPLTheme(
   base_size = 12,
-  base_family = "Arial",
+  base_family = "Helvetica",
   base_line_size = 0.5,
   base_rect_size = 0.5
 )
@@ -14,7 +14,7 @@ customCPLTheme(
 \arguments{
 \item{base_size}{Base font size. Default is 12.}
 
-\item{base_family}{Font. Default is Arial.}
+\item{base_family}{Font. Default is Helvetica.}
 
 \item{base_line_size}{Default is 0.5}
 
