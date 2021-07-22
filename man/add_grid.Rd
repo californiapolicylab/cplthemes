@@ -7,8 +7,8 @@
 add_grid(flip = FALSE)
 }
 \arguments{
-\item{flip}{TRUE/FALSE is \code{coord_flip()} used}
+\item{flip}{Is \code{\link[=coord_flip]{coord_flip()}} used? \link{logical}: TRUE/FALSE}
 }
 \description{
-Adds major hoizontal panel gridlines
+Adds major hoizontal panel gridlines to plots
 }

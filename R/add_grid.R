@@ -1,8 +1,8 @@
 #' CPL [ggplot2] theme
 #'
-#' Adds major hoizontal panel gridlines
+#' Adds major hoizontal panel gridlines to plots
 #'
-#' @param flip TRUE/FALSE is `coord_flip()` used
+#' @param flip Is [coord_flip()] used? [logical]: TRUE/FALSE
 #'
 #' @md
 #' @export
@@ -18,7 +18,7 @@ add_grid <- function(flip = FALSE) {
 
     } else {
 
-        stop('Invalid "axis" or "flip" argument. Valid arguments are: TRUE/FALSE',
+        stop('Invalid "flip" argument. Valid arguments are: TRUE/FALSE',
              call. = FALSE)
     }
 }

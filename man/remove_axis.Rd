@@ -7,10 +7,10 @@
 remove_axis(axis = "y", flip = FALSE)
 }
 \arguments{
-\item{axis}{Axis to drop. "x", "y", or "both"}
+\item{axis}{Axis to drop. \link{str}: "x", "y", or "both"}
 
-\item{flip}{TRUE/FALSE is \code{coord_flip()} used}
+\item{flip}{Is \code{\link[=coord_flip]{coord_flip()}} used? \link{logical}: TRUE/FALSE}
 }
 \description{
-Removes axes and axes labels
+Removes axes and axes' labels
 }

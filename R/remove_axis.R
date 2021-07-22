@@ -1,9 +1,9 @@
 #' CPL [ggplot2] theme
 #'
-#' Removes axes and axes labels
+#' Removes axes and axes' labels
 #'
-#' @param axis Axis to drop. "x", "y", or "both"
-#' @param flip TRUE/FALSE is `coord_flip()` used
+#' @param axis Axis to drop. [str]: "x", "y", or "both"
+#' @param flip Is [coord_flip()] used? [logical]: TRUE/FALSE
 #'
 #' @md
 #' @export
