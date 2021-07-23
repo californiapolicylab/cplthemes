@@ -4,7 +4,7 @@
 \alias{func_palette_cpl}
 \title{CPL [ggplot2] theme}
 \usage{
-func_palette_cpl(palette = "categorical")
+func_palette_cpl(palette = COLOR_SCHEMA)
 }
 \arguments{
 \item{palette}{Palette name.}

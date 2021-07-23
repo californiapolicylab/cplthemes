@@ -5,6 +5,7 @@
 \title{Makes the custom CPL theme the default theme for ggplot}
 \usage{
 setThemeCPL(
+  color_schema = "brief",
   base_size = 12,
   base_family = "Arial",
   base_line_size = 0.5,

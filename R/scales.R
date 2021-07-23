@@ -4,7 +4,7 @@
 #'
 #' @export
 #' @param palette Palette name.
-func_palette_cpl <- function(palette = "brief") {
+func_palette_cpl <- function(palette = COLOR_SCHEMA) {
     palette_list <- palette_cpl
 
     types <- palette_list[[palette]]
