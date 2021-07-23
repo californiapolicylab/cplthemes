@@ -40,37 +40,3 @@ palette_cpl <- {
 
     palette
 }
-
-palette_ucla <- {
-
-    palette <- list(
-        categorical = list(
-            c("#015587"),
-            c("#015587", "#FFB81C"),
-            c("#015587", "#FFB81C", "#8BB8E8"),
-            c("#015587", "#FFB81C", "#8BB8E8", "#013B5C"),
-            c("#015587", "#FFB81C", "#8BB8E8", "#013B5C", "#C3D7EE"),
-            c("#015587", "#FFB81C", "#8BB8E8", "#013B5C", "#C3D7EE", "#6D6E71")
-
-        )
-    )
-
-    palette
-}
-
-palette_ucb <- {
-
-    palette <- list(
-        categorical = list(
-            c("#2D637F"),
-            c("#2D637F", "#FDB515"),
-            c("#2D637F", "#FDB515", "#01B0DA"),
-            c("#2D637F", "#FDB515", "#01B0DA", "#013262"),
-            c("#2D637F", "#FDB515", "#01B0DA", "#013262", "#C2B9A7"),
-            c("#2D637F", "#FDB515", "#01B0DA", "#013262", "#C2B9A7", "#888888")
-
-        )
-    )
-
-    palette
-}
