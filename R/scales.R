@@ -4,7 +4,7 @@
 #'
 #' @export
 #' @param palette Palette name.
-func_palette_cpl <- function(palette = "categorical") {
+func_palette_cpl <- function(palette = "brief") {
     palette_list <- palette_cpl
 
     types <- palette_list[[palette]]
@@ -20,7 +20,7 @@ func_palette_cpl <- function(palette = "categorical") {
 #' @param ... other arguments passed to \code{discrete_scale()}
 #' @export
 scale_color_discrete <- function(...) {
-    ggplot2::discrete_scale("colour", "cpl", func_palette_cpl("categorical"), ...)
+    ggplot2::discrete_scale("colour", "cpl", func_palette_cpl(COLOR_SCHEMA), ...)
 }
 
 #' Discrete color scale that aligns with CPL style
@@ -29,7 +29,7 @@ scale_color_discrete <- function(...) {
 #' @param ... other arguments passed to \code{discrete_scale()}
 #' @export
 scale_colour_discrete <- function(...) {
-    ggplot2::discrete_scale("colour", "cpl", func_palette_cpl("categorical"), ...)
+    ggplot2::discrete_scale("colour", "cpl", func_palette_cpl(COLOR_SCHEMA), ...)
 }
 
 #' Discrete color scale that aligns with CPL style
@@ -38,5 +38,5 @@ scale_colour_discrete <- function(...) {
 #' @param ... other arguments passed to \code{discrete_scale()}
 #' @export
 scale_fill_discrete <- function(...) {
-    ggplot2::discrete_scale("fill", "cpl", func_palette_cpl("categorical"), ...)
+    ggplot2::discrete_scale("fill", "cpl", func_palette_cpl(COLOR_SCHEMA), ...)
 }
