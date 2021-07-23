@@ -10,8 +10,9 @@ mtcars %>%
     summarize(mean_mpg = mean(mpg)) %>%
     ggplot(mapping = aes(x = cyl, y = mean_mpg)) +
     geom_col() +
-    scale_y_continuous(expand = expand_scale(mult = c(0,0.1))) +
-    labs(title = "this title")
+    scale_y_continuous(expand = expansion(mult = c(0,0.1))) +
+    labs(title = "this title",
+         subtitle = "subtitle")
 
 # column with filled cols
 mtcars %>%
