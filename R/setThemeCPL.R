@@ -8,7 +8,6 @@
 #' @return
 #' @export
 #'
-#' @examples
 setThemeCPL <- function(base_size = 12,
                      base_family = "Arial",
                      base_line_size = 0.5,
@@ -30,21 +29,21 @@ setThemeCPL <- function(base_size = 12,
 
     # set default colors for monochromatic geoms ------------------------------
 
-    ggplot2::update_geom_defaults("bar", list(fill = "#246195"))
-    ggplot2::update_geom_defaults("col", list(fill = "#246195"))
-    ggplot2::update_geom_defaults("point", list(colour = "#246195"))
-    ggplot2::update_geom_defaults("line", list(colour = "#246195"))
-    ggplot2::update_geom_defaults("step", list(colour = "#246195"))
-    ggplot2::update_geom_defaults("path", list(colour = "#246195"))
-    ggplot2::update_geom_defaults("boxplot", list(fill = "#246195"))
-    ggplot2::update_geom_defaults("density", list(fill = "#246195"))
-    ggplot2::update_geom_defaults("violin", list(fill = "#246195"))
+    ggplot2::update_geom_defaults("bar", list(fill = "#2691d1"))
+    ggplot2::update_geom_defaults("col", list(fill = "#2691d1"))
+    ggplot2::update_geom_defaults("point", list(colour = "#2691d1"))
+    ggplot2::update_geom_defaults("line", list(colour = "#2691d1"))
+    ggplot2::update_geom_defaults("step", list(colour = "#2691d1"))
+    ggplot2::update_geom_defaults("path", list(colour = "#2691d1"))
+    ggplot2::update_geom_defaults("boxplot", list(fill = "#2691d1"))
+    ggplot2::update_geom_defaults("density", list(fill = "#2691d1"))
+    ggplot2::update_geom_defaults("violin", list(fill = "#2691d1"))
 
     # set default colors for monochromatic stats ------------------------------
 
-    ggplot2::update_stat_defaults("count", list(fill = "#246195"))
-    ggplot2::update_stat_defaults("boxplot", list(fill = "#246195"))
-    ggplot2::update_stat_defaults("density", list(fill = "#246195"))
-    ggplot2::update_stat_defaults("ydensity", list(fill = "#246195"))
+    ggplot2::update_stat_defaults("count", list(fill = "#2691d1"))
+    ggplot2::update_stat_defaults("boxplot", list(fill = "#2691d1"))
+    ggplot2::update_stat_defaults("density", list(fill = "#2691d1"))
+    ggplot2::update_stat_defaults("ydensity", list(fill = "#2691d1"))
 
 }
