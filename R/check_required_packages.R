@@ -15,7 +15,7 @@ check_required_packages <- function() {
     # update.packages(repos="file:////commons/Commons/code/r/repo_4.1", ask=FALSE)
 
     # Checking if required packages are installed and if not, installing them
-    REQUIRED_PACKAGES = c("tidyverse","cplthemes","tidylog","hehe")
+    REQUIRED_PACKAGES = c("tidyverse","cplthemes","tidylog")
     install_status = REQUIRED_PACKAGES %in% installed.packages()
     for (i in seq_along(install_status)) {
         if (install_status[i] == FALSE) {
