@@ -12,10 +12,6 @@ editor_options:
 ---
 
 ```{r message=FALSE, warning=FALSE, r,include=FALSE}
-# Loading the core CPL package. This is required for this template to be
-# installed.
-library(cplthemes)
-
 # Turning off scientific notation
 options(scipen = 999)
 
@@ -23,6 +19,7 @@ options(scipen = 999)
 cplthemes::check_required_packages()
 
 # Loading required packages
+library(cplthemes)
 library(tidyverse)
 library(tidylog)
 
