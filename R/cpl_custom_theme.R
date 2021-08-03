@@ -6,7 +6,7 @@
 #' @param base_rect_size Default is 0.5
 #'
 #' @return A theme that can then be used with \code{\link{theme_set}}
-customCPLTheme <- function(base_size = 12,
+cpl_custom_theme <- function(base_size = 12,
                            base_family = "Helvetica",
                            base_line_size = 0.5,
                            base_rect_size = 0.5) {

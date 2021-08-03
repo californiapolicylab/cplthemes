@@ -15,7 +15,7 @@ devtools::install_github("lmgibson/cplthemes")
 library(tidyverse)
 library(cplthemes)
 
-setThemeCPL()
+cpl_set_theme()
 
 mtcars %>%
     group_by(cyl) %>%

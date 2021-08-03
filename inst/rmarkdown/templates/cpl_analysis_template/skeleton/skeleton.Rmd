@@ -27,7 +27,7 @@ library(tidyverse)
 library(tidylog)
 
 
-setThemeCPL(color_schema = 'brief')
+cpl_set_theme(color_schema = 'brief')
 ```
 
 ## Introduction

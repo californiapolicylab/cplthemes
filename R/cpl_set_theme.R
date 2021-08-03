@@ -8,7 +8,7 @@
 #' @return
 #' @export
 #'
-setThemeCPL <- function(color_schema = 'brief',
+cpl_set_theme <- function(color_schema = 'brief',
                         base_size = 12,
                         base_family = "Arial",
                         base_line_size = 0.5,
@@ -16,7 +16,7 @@ setThemeCPL <- function(color_schema = 'brief',
 
     COLOR_SCHEMA <<- color_schema
 
-    ggplot2::theme_set(customCPLTheme())
+    ggplot2::theme_set(cpl_custom_theme())
 
     # add base_family font to text and label geoms ---------------------------
 

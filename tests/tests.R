@@ -2,7 +2,7 @@
 library(tidyverse)
 library(cplthemes)
 
-setThemeCPL()
+cpl_set_theme()
 
 # column
 mtcars %>%
@@ -29,8 +29,7 @@ mtcars %>%
          caption = "Source: some source about cars")
 
 # lingering questions/design features
-
-# inconsistency in space between columns
-# inconsistency in legend placement
+#   - inconsistency in space between columns
+#   - inconsistency in legend placement
 
 

@@ -2,7 +2,7 @@
 #'
 #' @format A \code{list}.
 #' @export
-palette_cpl <- {
+cpl_palette <- {
 
     palette <- list(
         brief = list(
