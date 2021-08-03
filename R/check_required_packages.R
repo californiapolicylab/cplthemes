@@ -8,14 +8,16 @@
 #' @return
 #' @export
 check_required_packages <- function() {
+
+    REQUIRED_PACKAGES = c("tidyverse","cplthemes","tidylog")
+
+    # Extract R version and construct repo URL
     R_VERSION = paste(R.Version()$major,
                       substr(x = R.Version()$minor, start = 0, stop = 1),
                       sep = '.')
     REPO_URL = paste("file:////commons/Commons/code/r/repo_",R_VERSION,sep = '')
-    # update.packages(repos="file:////commons/Commons/code/r/repo_4.1", ask=FALSE)
 
     # Checking if required packages are installed and if not, installing them
-    REQUIRED_PACKAGES = c("tidyverse","cplthemes","tidylog")
     install_status = REQUIRED_PACKAGES %in% installed.packages()
     for (i in seq_along(install_status)) {
         if (install_status[i] == FALSE) {
