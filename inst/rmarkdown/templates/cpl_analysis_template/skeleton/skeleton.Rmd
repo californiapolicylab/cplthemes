@@ -12,11 +12,31 @@ editor_options:
 ---
 
 ```{r,include=FALSE,message=FALSE,warning=FALSE}
+# Turning off scientific notation
 options(scipen = 999)
 
-library(ggplot2)
-library(cplthemes)
+# Setting install repo to be from local CPL repo
+R_VERSION = paste(R.Version()$major,
+          substr(x = R.Version()$minor, start = 0, stop = 1),
+          sep = '.')
+REPO_URL = paste("file:////commons/Commons/code/r/repo_",R_VERSION,sep = '')
+# update.packages(repos="file:////commons/Commons/code/r/repo_4.1", ask=FALSE)
+
+# Checking if required packages are installed and if not, installing them
+REQUIRED_PACKAGES = c("tidyverse","cplthemes","tidylog","hehe")
+install_status = REQUIRED_PACKAGES %in% installed.packages()
+for (i in seq_along(install_status)) {
+  if (install_status[i] == FALSE) {
+    print(paste("Installing: ",REQUIRED_PACKAGES[i]))
+    install.packages(REQUIRED_PACKAGES[i], repos = REPO_URL)
+  }
+}
+
+# Loading required packages
 library(tidyverse)
+library(cplthemes)
+library(tidylog)
+
 
 setThemeCPL(color_schema = 'brief')
 ```
