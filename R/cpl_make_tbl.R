@@ -3,17 +3,17 @@
 #' Make a table conforming to CPL's table style
 #'
 #'@param data The table data for your table. [data.frame]
-#'@param tbl_num The table number. [str]
-#'@param tbl_title A descriptive table title. [str]
+#'@param number The table number. [str]
+#'@param title A descriptive table title. [str]
 #'
 #' @md
 #' @export
 
 cpl_make_tbl <- function(data,
-                      tbl_num = NA,
-                      tbl_title = NA) {
+                      number = NA,
+                      title = NA) {
 
-    tbl_cols <- ncol(data)
+    cols <- ncol(data)
 
     table <- data %>%
         gt() %>%
@@ -27,20 +27,30 @@ cpl_make_tbl <- function(data,
             table.border.top.width = px(1),
             table.border.top.color = "#b2bbCb",
             heading.border.bottom.style = "hidden",
+            column_labels.border.top.style = "solid",
+            column_labels.border.top.width = px(1),
+            column_labels.border.top.color = "b2bbcb",
             column_labels.border.bottom.style = "solid",
             column_labels.border.bottom.width = px(1),
             column_labels.border.bottom.color = "#b2bbCb",
-            table_body.border.top.style = "transparent",
+            table_body.border.top.style = "solid",
+            table_body.border.top.width = px(1),
+            table_body.border.top.color = "#b2bbCb",
             table_body.hlines.style = "transparent",
             table_body.border.bottom.style = "solid",
             table_body.border.bottom.width = px(1),
             table_body.border.bottom.color = "#b2bbCb",
-            table.border.bottom.style = "hidden",
+            table.border.bottom.style = "solid",
+            table.border.bottom.width = px(1),
+            table.border.bottom.color = "b2bbcb",
+            footnotes.border.bottom.style = "hidden",
+            source_notes.border.bottom.style = "hidden",
             # formatting font for for table components
             heading.title.font.size = px(11),
             heading.subtitle.font.size = px(15),
             column_labels.font.size = px(14),
             column_labels.text_transform = "uppercase",
+            table.font.names = c("helvetica"),
             table.font.size = px(14),
             source_notes.font.size = px(12),
             footnotes.font.size = px(12),
@@ -58,28 +68,6 @@ cpl_make_tbl <- function(data,
             grand_summary_row.border.width = px(1),
             grand_summary_row.border.color = "#b2bbCb"
         ) %>%
-        # uppercase, left-aligned table and number
-        # tab_style(
-        #     style = list(
-        #         cell_text(
-        #             weight = "normal",
-        #             align = "left",
-        #             transform = "uppercase"
-        #         )
-        #     ),
-        #     locations = cells_title("title")
-        # ) %>%
-        # # CPL blue, left-aligned table title
-        # tab_style(
-        #     style = list(
-        #         cell_text(
-        #             color = "#246195",
-        #             weight = "normal",
-        #             align = "left"
-        #         )
-        #     ),
-        #     locations = cells_title("subtitle")
-        # ) %>%
         # left-aligned first (left-most) column label/cells
         tab_style(
             style = list(
@@ -105,43 +93,43 @@ cpl_make_tbl <- function(data,
             ),
             locations = list(
                 cells_body(
-                    columns = 2:tbl_cols
+                    columns = 2:all_of(cols)
                     ),
                 cells_column_labels(
-                    columns = 2:tbl_cols
+                    columns = 2:all_of(cols)
                     )
             )
         )
 
     # table number and title conditional formatting
-    if(is.na(tbl_num) == FALSE && is.na(tbl_title) == FALSE) {
+    if(is.na(number) == FALSE && is.na(title) == FALSE) {
 
-        tbl_num <- paste0("TABLE ", tbl_num, ".")
+        number <- paste0("TABLE ", number, ". ")
 
         table <- table %>%
             # using custom ccs/html formatting to produce single line title and table number
             tab_header(title = html(paste0('<div style="color:#246195;text-align:left;font-size:11px;font-weight:bold">',
-                                           tbl_num,
+                                           number,
                                            '<span style="font-size:15px;color:black;font-weight:normal">',
-                                           tbl_title,
+                                           title,
                                            '</span></div>')))
 
-    } else if (is.na(tbl_num) == TRUE && is.na(tbl_title) == FALSE) {
+    } else if (is.na(number) == TRUE && is.na(title) == FALSE) {
 
         table <- table %>%
             # using custom ccs/html formatting to produce single line title and table number
             tab_header(title = html(paste0('<div style="color:#black;text-align:left;font-size:15px;font-weight:normal">',
-                                           tbl_title,
+                                           title,
                                            '</div>')))
 
-    } else if (is.na(tbl_num) == FALSE && is.na(tbl_title) == TRUE) {
+    } else if (is.na(number) == FALSE && is.na(title) == TRUE) {
 
-        tbl_num <- paste0("TABLE ", tbl_num, ".")
+        number <- paste0("TABLE ", number)
 
         table <- table %>%
             # using custom ccs/html formatting to produce single line title and table number
             tab_header(title = html(paste0('<div style="color:#246195;text-align:left;font-size:11px;font-weight:bold">',
-                                           tbl_num,
+                                           number,
                                            '</div>')))
     }
 
