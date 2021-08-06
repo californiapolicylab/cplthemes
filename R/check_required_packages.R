@@ -9,7 +9,7 @@
 #' @export
 check_required_packages <- function() {
 
-    REQUIRED_PACKAGES = c("tidyverse","cplthemes","tidylog")
+    REQUIRED_PACKAGES = c("tidyverse","cplthemes","tidylog","gt")
 
     # Extract R version and construct repo URL
     R_VERSION = paste(R.Version()$major,

@@ -11,20 +11,14 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r message=FALSE, warning=FALSE, r,include=FALSE}
-# Turning off scientific notation
+```{r,include=FALSE,message=FALSE,warning=FALSE}
 options(scipen = 999)
 
-# Checking for required packages and installing, if not installed
-cplthemes::check_required_packages()
-
-# Loading required packages
-library(gt)
-library(tidyverse)
-library(tidylog)
+library(ggplot2)
 library(cplthemes)
+library(tidyverse)
 
-cpl_set_theme(color_schema = 'brief')
+setThemeCPL(color_schema = 'brief')
 ```
 
 ## Introduction

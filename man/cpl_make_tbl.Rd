@@ -4,12 +4,12 @@
 \alias{cpl_make_tbl}
 \title{CPL table styling with \link{gt}}
 \usage{
-cpl_make_tbl(data, tbl_num = "", tbl_title = "")
+cpl_make_tbl(data, tbl_num = NA, tbl_title = NA)
 }
 \arguments{
 \item{data}{The table data for your table. \link{data.frame}}
 
-\item{tbl_num}{The table number. At CPL, this is typically of format "table x.". \link{str}}
+\item{tbl_num}{The table number. \link{str}}
 
 \item{tbl_title}{A descriptive table title. \link{str}}
 }

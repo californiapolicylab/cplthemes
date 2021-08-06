@@ -3,15 +3,15 @@
 #' Make a table conforming to CPL's table style
 #'
 #'@param data The table data for your table. [data.frame]
-#'@param tbl_num The table number. At CPL, this is typically of format "table x.". [str]
+#'@param tbl_num The table number. [str]
 #'@param tbl_title A descriptive table title. [str]
 #'
 #' @md
 #' @export
 
 cpl_make_tbl <- function(data,
-                      tbl_num = "",
-                      tbl_title = "") {
+                      tbl_num = NA,
+                      tbl_title = NA) {
 
     tbl_cols <- ncol(data)
 
@@ -58,31 +58,28 @@ cpl_make_tbl <- function(data,
             grand_summary_row.border.width = px(1),
             grand_summary_row.border.color = "#b2bbCb"
         ) %>%
-        # mapping number and title arguments to gt
-        tab_header(title = tbl_num,
-                   subtitle = tbl_title) %>%
         # uppercase, left-aligned table and number
-        tab_style(
-            style = list(
-                cell_text(
-                    weight = "normal",
-                    align = "left",
-                    transform = "uppercase"
-                )
-            ),
-            locations = cells_title("title")
-        ) %>%
-        # CPL blue, left-aligned table title
-        tab_style(
-            style = list(
-                cell_text(
-                    color = "#246195",
-                    weight = "normal",
-                    align = "left"
-                )
-            ),
-            locations = cells_title("subtitle")
-        ) %>%
+        # tab_style(
+        #     style = list(
+        #         cell_text(
+        #             weight = "normal",
+        #             align = "left",
+        #             transform = "uppercase"
+        #         )
+        #     ),
+        #     locations = cells_title("title")
+        # ) %>%
+        # # CPL blue, left-aligned table title
+        # tab_style(
+        #     style = list(
+        #         cell_text(
+        #             color = "#246195",
+        #             weight = "normal",
+        #             align = "left"
+        #         )
+        #     ),
+        #     locations = cells_title("subtitle")
+        # ) %>%
         # left-aligned first (left-most) column label/cells
         tab_style(
             style = list(
@@ -115,6 +112,38 @@ cpl_make_tbl <- function(data,
                     )
             )
         )
+
+    # table number and title conditional formatting
+    if(is.na(tbl_num) == FALSE && is.na(tbl_title) == FALSE) {
+
+        tbl_num <- paste0("TABLE ", tbl_num, ".")
+
+        table <- table %>%
+            # using custom ccs/html formatting to produce single line title and table number
+            tab_header(title = html(paste0('<div style="color:#246195;text-align:left;font-size:11px;font-weight:bold">',
+                                           tbl_num,
+                                           '<span style="font-size:15px;color:black;font-weight:normal">',
+                                           tbl_title,
+                                           '</span></div>')))
+
+    } else if (is.na(tbl_num) == TRUE && is.na(tbl_title) == FALSE) {
+
+        table <- table %>%
+            # using custom ccs/html formatting to produce single line title and table number
+            tab_header(title = html(paste0('<div style="color:#black;text-align:left;font-size:15px;font-weight:normal">',
+                                           tbl_title,
+                                           '</div>')))
+
+    } else if (is.na(tbl_num) == FALSE && is.na(tbl_title) == TRUE) {
+
+        tbl_num <- paste0("TABLE ", tbl_num, ".")
+
+        table <- table %>%
+            # using custom ccs/html formatting to produce single line title and table number
+            tab_header(title = html(paste0('<div style="color:#246195;text-align:left;font-size:11px;font-weight:bold">',
+                                           tbl_num,
+                                           '</div>')))
+    }
 
     return(table)
 
